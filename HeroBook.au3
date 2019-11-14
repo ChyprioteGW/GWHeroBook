@@ -1,5 +1,5 @@
 
-#include <GWA2.au3>
+#include "../GWA2.au3"
 #include <SimpleInventory.au3>
 
 #Region Constants
