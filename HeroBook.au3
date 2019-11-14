@@ -23,7 +23,7 @@ Global $MAP_TO_ZONE, $TIMER_TOTAL
 FileOpen($FILE)
 Log("Bot started")
 While 1
-	sleep(200)
+    sleep(200)
     If Not $IS_RUNNING Then ContinueLoop
 
     ;Stop if we can't reach the outpost
@@ -62,7 +62,7 @@ Func TravelToOutpost()
         Return False
     EndIf
 
-	RndSleep(1000)
+    RndSleep(1000)
     Return True
 EndFunc ;TravelToOutpost
 #EndRegion Actions

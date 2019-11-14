@@ -23,8 +23,8 @@ $TOTAL_TIME = GUICtrlCreateLabel("-", 55, 145, 54, 17, $SS_RIGHT)
 
 $StatusLabel = GUICtrlCreateEdit("", 115, 6, 178, 200, 2097220)
 $RenderingBox = GUICtrlCreateCheckbox("Disable Rendering", 6, 162, 103, 17)
-   GUICtrlSetOnEvent(-1, "ToggleRendering")
-   GUICtrlSetState($RenderingBox, $GUI_DISABLE)
+    GUICtrlSetOnEvent(-1, "ToggleRendering")
+    GUICtrlSetState($RenderingBox, $GUI_DISABLE)
 GUISetOnEvent($GUI_EVENT_CLOSE, "_exit")
 GUISetState(@SW_SHOW)
 #EndRegion GUI
@@ -55,13 +55,13 @@ EndFunc ;GUI
 
 #Region Helpers
 Func Out($TEXT)
-	GUICtrlSetData($GLOGBOX, GUICtrlRead($GLOGBOX) & "[" & @HOUR & ":" & @MIN & "] " & $TEXT & @CRLF)
-	_GUICtrlEdit_Scroll($GLOGBOX, $SB_SCROLLCARET)
-	_GUICtrlEdit_Scroll($GLOGBOX, $SB_LINEUP)
-	UpdateLock()
+    GUICtrlSetData($GLOGBOX, GUICtrlRead($GLOGBOX) & "[" & @HOUR & ":" & @MIN & "] " & $TEXT & @CRLF)
+    _GUICtrlEdit_Scroll($GLOGBOX, $SB_SCROLLCARET)
+    _GUICtrlEdit_Scroll($GLOGBOX, $SB_LINEUP)
+    UpdateLock()
 EndFunc ;Out
 Func GUITime()
-	$time = TimerDiff($TIMER_TOTAL)
+    $time = TimerDiff($TIMER_TOTAL)
     GUICtrlSetData($GUI_LABEL_TIME, StringFormat("%03u:%02u", $time/1000/60, Mod($time/1000,60)))
 EndFunc ;GUITime
 #EndRegion Helpers
@@ -70,9 +70,9 @@ EndFunc ;GUITime
 
 Func _exit()
     If $GUI_RENDER Then
-       EnableRendering()
-       WinSetState(GetWindowHandle(), "", @SW_SHOW)
-       Sleep(500)
+        EnableRendering()
+        WinSetState(GetWindowHandle(), "", @SW_SHOW)
+        Sleep(500)
     EndIf
     Exit
  EndFunc
