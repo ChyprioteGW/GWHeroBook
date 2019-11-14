@@ -1,6 +1,6 @@
 
 #include "../GWA2.au3"
-#include <SimpleInventory.au3>
+#include "../SimpleInventory.au3"
 
 #Region Constants
 Global $FILE = @ScriptDir & "Trace-" & @MDAY & @MON & @HOUR & @MIN & ".txt"
